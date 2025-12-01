@@ -74,7 +74,7 @@ const createRiddle = ({ name, folder, level,stage, rewardText, endText, correctA
         answers: choices,
         correctAnswer: correct,
         hints: hints.map((hint, index) => createImage(`./img/Rätsel/${folder}/${level}/Hinweis${index + 1}.png`)),
-        hintTimes: [5, 10, 15],
+        hintTimes: [20, 40, 80],
         targetLevel,
         ...extraImages // Falls spezielle Bilder benötigt werden (z. B. für KI-Rätsel)
     }
@@ -170,6 +170,7 @@ document.addEventListener("SchwierigkeitsGradSet", (event) => {
     console.log("Schwierigkeitsgrad gesetzt:", event.detail);
     initializeRiddles(event.detail);
 });
+
 
 
 
